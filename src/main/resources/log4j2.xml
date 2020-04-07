@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+<!--        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level - traceId:[%X{traceId}] %c{36} &#45;&#45; %m%n-->
+<!--        </Property>-->
+        <Property name="LOG_PATTERN">%m%n
+        </Property>
+        <Property name="APP_LOG_ROOT">/data/logs</Property>
+        <Property name="APP_LOG_NAME">opay-payment-iso</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}" charset="UTF-8"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO" includeLocation="true">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <Logger name="team.opay" additivity="false" includeLocation="true">
+            <AppenderRef ref="Console"/>
+        </Logger>
+    </Loggers>
+</Configuration>
