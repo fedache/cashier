@@ -1,7 +1,36 @@
 # cashier
 Java client for Cashier services
 
-[ ![Download](https://api.bintray.com/packages/fedache/opay-repository/cahier/images/download.svg?version=0.1) ](https://bintray.com/fedache/opay-repository/cahier/0.1/link)
+## Gradle
+Add custom maven repository and cashier dependecy
+```
+repositories {
+    mavenCentral()
+    maven {
+        url  "https://dl.bintray.com/fedache/opay-repository"
+    }
+}
+dependencies {
+    implementation 'team.opay:cashier:1.0.0'
+}
+```
+
+## Maven
+```
+ <repositories>
+        <repository>
+            <id>opay-repo</id>
+            <url>https://dl.bintray.com/fedache/opay-repository</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>team.opay</groupId>
+            <artifactId>cashier</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+```
 
 # Usage
 
